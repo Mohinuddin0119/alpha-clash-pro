@@ -9,10 +9,18 @@
 //     playgroundSection.classList.remove('hidden');
 // }
 
+function continueGame(){
+    // generate a random alphabet
+    const alphabet = generateARandomAlphabet()
+    console.log("Random Alphabet is : ",alphabet.toUpperCase())
+}
+
 // acces by user function (both output is same)
 function play(){
     // hide
     hideElementById('home-screen');
     // show
     showElementById('play-ground')
+    // continue game
+    continueGame()
 }
