@@ -14,24 +14,29 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
-  <body class="font-poppins ">
+  <body class="font-poppins">
     <main
       class="bg-[#010313] text-white min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center"
     >
       <!-- home section start here -->
       <section
-        class="home min-h-screen flex justify-center items-center "
+        id="home-screen"
+        class="min-h-screen flex justify-center items-center"
       >
         <div class="flex flex-col items-center gap-10">
           <h1 class="text-8xl font-anton uppercase">Alphabetic clash</h1>
           <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-          <button onclick="play()" class="btn text-pink-800 bg-white">Play Now</button>
+          <button onclick="play()" class="btn text-pink-800 bg-white">
+            Play Now
+          </button>
         </div>
       </section>
       <!-- home section end here -->
 
       <!-- play ground section start here -->
-      <section class="play-ground flex flex-col gap-20  items-center min-h-screen pt-20 hidden">
+      <section
+       id="play-ground" class=" flex flex-col gap-20 items-center min-h-screen pt-20 hidden"
+      >
         <!-- screen start -->
         <div
           class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB3] rounded-2xl"
@@ -89,12 +94,12 @@
         <div class="flex justify-between w-1/2">
           <button class="btn bg-[#894189] px-8 rounded-full">
             Life
-            <img src="./images/heart.svg" alt="">
+            <img src="./images/heart.svg" alt="" />
             <span>1</span>
           </button>
           <button class="btn bg-[#360490] px-8 rounded-full">
             Life
-            <img src="./images/doller.svg" alt="">
+            <img src="./images/doller.svg" alt="" />
             <span>1</span>
           </button>
         </div>
@@ -102,18 +107,23 @@
       <!-- play ground section end here -->
 
       <!-- score section start here -->
-      <section class="score flex justify-center items-center min-h-screen hidden">
+      <section
+       id="score" class=" flex justify-center items-center min-h-screen hidden"
+      >
         <div class="space-y-6 text-center bg-[#FFFFFF33] rounded-lg p-6">
-            <h1 class="text-6xl">
-                <span>Score:</span>
-                <span>14</span>
-            </h1>
-            <button class="btn bg-white text-orange-600 border-none">Play Again</button>
-            <p>Practice will make you pro</p>
+          <h1 class="text-6xl">
+            <span>Score:</span>
+            <span>14</span>
+          </h1>
+          <button class="btn bg-white text-orange-600 border-none">
+            Play Again
+          </button>
+          <p>Practice will make you pro</p>
         </div>
       </section>
       <!-- score section end here -->
     </main>
+    <script src="./javascript/utility.js"></script>
     <script src="./javascript/alpha.js"></script>
   </body>
 </html>
