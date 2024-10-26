@@ -12,7 +12,14 @@
 function continueGame(){
     // generate a random alphabet
     const alphabet = generateARandomAlphabet()
-    console.log("Random Alphabet is : ",alphabet.toUpperCase())
+    console.log("Random Alphabet is : ",alphabet)
+
+    // set randomly generated alphabet to the screen
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    currentAlphabetElement.innerText = alphabet;
+
+    // set background color
+    setBackgroundColorById(alphabet);
 }
 
 // acces by user function (both output is same)

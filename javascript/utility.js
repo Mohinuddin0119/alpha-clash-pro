@@ -24,5 +24,10 @@ function generateARandomAlphabet(){
     const alphabet = alphabets[index]
     console.log(index,alphabet)
     return alphabet
+}
 
+// set background color by id
+function setBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-orange-400')
 }
