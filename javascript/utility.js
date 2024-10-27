@@ -22,7 +22,7 @@ function generateARandomAlphabet(){
 
     // show random alphabet using index
     const alphabet = alphabets[index]
-    console.log(index,alphabet)
+    // console.log(index,alphabet)
     return alphabet
 }
 
@@ -30,4 +30,21 @@ function generateARandomAlphabet(){
 function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400')
+}
+// remove background color by id
+function removeBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-orange-400')
+}
+// getTextElementById
+function getTextElementById(elementId){
+    const element = document.getElementById(elementId);
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
+// setTextElementById
+function setTextElementById(elementId,value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
 }

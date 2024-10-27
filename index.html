@@ -24,8 +24,8 @@
         class="min-h-screen flex justify-center items-center"
       >
         <div class="flex flex-col items-center gap-10">
-          <h1 class="text-8xl font-anton uppercase">Alphabetic clash</h1>
-          <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <h1 class="text-4xl md:text-8xl font-anton uppercase">Alphabetic clash</h1>
+          <p class="p-4">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
           <button onclick="play()" class="btn text-pink-800 bg-white">
             Play Now
           </button>
@@ -39,10 +39,10 @@
       >
         <!-- screen start -->
         <div
-          class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB3] rounded-2xl"
+          class="w-250px md:artboard md:artboard-horizontal md:phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB3] rounded-2xl"
         >
           <div class="flex justify-center">
-            <p class="bg-[#2F2941] px-6 pb-4 rounded-b-xl text-2xl">
+            <p class="bg-[#2F2941] md:px-6 px-4 pb-2 md:pb-4 rounded-b-xl md:text-2xl">
               Don't watch keyboard while playing...
             </p>
           </div>
@@ -54,7 +54,7 @@
 
         <!-- keyboard start -->
         <div class="">
-          <div class="my-1 flex w-full justify-center gap-1">
+          <div class="my-1 w-full flex  justify-center gap-1">
             <kbd id="q" class="kbd bg-white text-black">q</kbd>
             <kbd id="w" class="kbd bg-white text-black">w</kbd>
             <kbd id="e" class="kbd bg-white text-black">e</kbd>
@@ -91,16 +91,18 @@
         <!-- keyboard end -->
 
         <!-- life and scoree -->
-        <div class="flex justify-between w-1/2">
-          <button class="btn bg-[#894189] px-8 rounded-full">
+        <div class="flex justify-between md:w-1/2 gap-5">
+          <!-- display life -->
+          <button class="btn bg-[#c03dc0] px-8 rounded-full">
             Life
             <img src="./images/heart.svg" alt="" />
-            <span>1</span>
+            <span id="current-life">5</span>
           </button>
-          <button class="btn bg-[#360490] px-8 rounded-full">
-            Life
+          <!-- display score -->
+          <button class="btn bg-[#4c17ad] px-8 rounded-full">
+            score
             <img src="./images/doller.svg" alt="" />
-            <span>1</span>
+            <span id="current-score">0</span>
           </button>
         </div>
       </section>
