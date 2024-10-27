@@ -13,7 +13,7 @@
 function continueGame(){
     // generate a random alphabet
     const alphabet = generateARandomAlphabet()
-    console.log("Random Alphabet is :",alphabet.toUpperCase())
+    // console.log("Random Alphabet is :",alphabet.toUpperCase())
 
     // set randomly generated alphabet to the screen
     const currentAlphabetElement = document.getElementById('current-alphabet');
@@ -42,17 +42,22 @@ function play(){
 function handleKeyboardButtonPress(event){
     // player pressed key
     const playerPressKey = event.key;
-    console.log("player press key is:",playerPressKey)
+    // console.log("player fpress key is:",playerPressKey)
+
+    // stop game
+    if(playerPressKey === 'Escape' ){
+        gameOver();
+    }
 
     // expected key
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
     const targetAlphabet = currentAlphabet.toLowerCase();
-    console.log(playerPressKey,targetAlphabet)
+    // console.log(playerPressKey,targetAlphabet)
 
     // check right or wrong
     if(playerPressKey === targetAlphabet){
-        console.log('you get a point');
+        // console.log('you get a point');
 
         const currentScore = getTextElementById('current-score');
         const updatedScore = currentScore + 1;
@@ -72,15 +77,16 @@ function handleKeyboardButtonPress(event){
         // currentScoreElement.innerText = newScore;
 
         // start a new round
+        // clear highlight alphabet
         removeBackgroundColorById(targetAlphabet)
         continueGame();
     }
     else{
-        console.log('you lost a life')
+        // console.log('you lost a life')
 
         const currentLife = getTextElementById('current-life');
         const updatedLife = currentLife - 1;
-        console.log(updatedLife)
+        // console.log(updatedLife)
         setTextElementById('current-life', updatedLife);
 
         if(updatedLife === 0){

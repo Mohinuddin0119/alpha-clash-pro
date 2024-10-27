@@ -52,4 +52,21 @@ function setTextElementById(elementId,value){
 function gameOver(){
     hideElementById('play-ground');
     showElementById('score');
+
+    // display final score
+    const lastScore = getTextElementById('current-score');
+    // console.log(lastScore);
+    setTextElementById('last-score',lastScore)
+
+    // clear highlight alphabet
+    const currentAlphabet = getElmentTextById('current-alphabet');
+    // console.log(currentAlphabet)
+    removeBackgroundColorById(currentAlphabet)
+
+}
+// find element 
+function getElmentTextById(elementId){
+    const element = document.getElementById(elementId)
+    const text = element.innerText
+    return text;
 }
