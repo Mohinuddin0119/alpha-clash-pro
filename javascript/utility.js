@@ -48,3 +48,8 @@ function setTextElementById(elementId,value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
+// gameOver()
+function gameOver(){
+    hideElementById('play-ground');
+    showElementById('score');
+}

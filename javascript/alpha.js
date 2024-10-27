@@ -27,8 +27,13 @@ function continueGame(){
 function play(){
     // hide
     hideElementById('home-screen');
+    hideElementById('score')
     // show
     showElementById('play-ground')
+
+    // reset and update score and life
+    setTextElementById('current-life',5)
+    setTextElementById('current-score',0)
     // continue game
     continueGame()
 }
@@ -75,7 +80,12 @@ function handleKeyboardButtonPress(event){
 
         const currentLife = getTextElementById('current-life');
         const updatedLife = currentLife - 1;
+        console.log(updatedLife)
         setTextElementById('current-life', updatedLife);
+
+        if(updatedLife === 0){
+            gameOver();
+        }
 
         // -----------------
         // step 1: get the life element
@@ -88,7 +98,7 @@ function handleKeyboardButtonPress(event){
         // const newLife = currentLife - 1
 
         // show the updated life
-        currentLifeElement.innerText = newLife;
+        // currentLifeElement.innerText = newLife;
     }
 }
 
